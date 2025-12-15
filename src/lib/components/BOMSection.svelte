@@ -5,71 +5,66 @@
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="text-center mb-16">
       <h2 class="text-5xl font-bold mb-6 tracking-tight">
-        One-click Bill of Materials
+        Searchable Factory Memory
       </h2>
       <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-        Save your team's precious time. Config replaces the lengthy process of manual BOM creation with one-click BOM from your engineering assembly, all driven by CAD.
+        Every video, voice note, and conversation becomes part of your factory's permanent memory. Search across years of tribal knowledge in seconds—never lose critical information again.
       </p>
     </div>
 
-    <!-- BOM UI Mockup -->
-    <div class="bg-white rounded-lg overflow-hidden shadow-2xl mb-20 text-gray-900 mx-auto max-w-[1000px]">
+    <!-- Search UI Mockup -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-2xl mb-20 text-gray-900 mx-auto max-w-[1000px]" generating>
       <!-- Window Header -->
-      <div class="bg-gray-50 border-b border-gray-200 px-4 py-2 flex items-center justify-between">
+      <div class="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center justify-between">
          <div class="flex items-center gap-2">
-            <span class="text-xs font-semibold text-gray-700">Atlas Main BOM</span>
+            <span class="text-xs font-semibold text-gray-700">Factory Knowledge Search</span>
          </div>
          <div class="flex items-center gap-3">
             <div class="flex items-center gap-1 text-xs text-gray-500 bg-white border border-gray-200 px-2 py-1 rounded">
-               <span>👁️</span> View
+               <span>🔍</span> Search
             </div>
             <div class="flex items-center gap-1 text-xs text-gray-500 bg-white border border-gray-200 px-2 py-1 rounded">
-               <span>📊</span> All columns
-            </div>
-            <div class="flex items-center gap-1 text-xs text-gray-500 bg-white border border-gray-200 px-2 py-1 rounded">
-               <span>⬇️</span> Export CSV
+               <span>📁</span> Filter
             </div>
             <button class="text-gray-400 hover:text-gray-600">✕</button>
          </div>
       </div>
 
-      <!-- Table Header -->
-      <div class="grid grid-cols-12 bg-gray-50 border-b border-gray-200 text-[10px] font-bold text-gray-500 uppercase tracking-wider py-2 px-4">
-         <div class="col-span-1">Make/Buy</div>
-         <div class="col-span-1">Alt</div>
-         <div class="col-span-1">Lvl</div>
-         <div class="col-span-2">Part #</div>
-         <div class="col-span-3">Part Name</div>
-         <div class="col-span-1">Rev</div>
-         <div class="col-span-1">Qty</div>
-         <div class="col-span-1">UOM</div>
-         <div class="col-span-1">Part Family</div>
-      </div>
-
-      <!-- Table Body - Empty State / Search for effect -->
-      <div class="h-[400px] bg-white relative">
-         <!-- Search Overlay Effect -->
-         <div class="absolute top-4 left-4 right-4 bg-white border border-gray-200 shadow-sm rounded p-2 flex items-center gap-2 max-w-md z-10">
-            <span class="text-gray-400">🔍</span>
-            <span class="text-sm text-gray-900">Atl|</span>
-            <div class="w-[1px] h-4 bg-blue-500 animate-pulse"></div>
+      <!-- Search Interface -->
+      <div class="h-[400px] bg-white relative p-6">
+         <!-- Search Bar -->
+         <div class="bg-gray-50 border border-gray-200 shadow-sm rounded-lg p-4 flex items-center gap-3 mb-6">
+            <span class="text-gray-400 text-xl">🔍</span>
+            <input type="text" placeholder="Search factory knowledge..." class="flex-1 bg-transparent text-gray-900 focus:outline-none" value="machine calibration">
+            <div class="text-xs text-gray-400">124 results</div>
          </div>
          
-         <!-- Blurred/Faded rows to simulate content behind search -->
-         <div class="opacity-30 pointer-events-none">
-             {#each Array(8) as _, i}
-             <div class="grid grid-cols-12 border-b border-gray-100 py-3 px-4 text-xs text-gray-600">
-                <div class="col-span-1 flex items-center"><div class="w-2 h-2 rounded-full bg-green-500 mr-2"></div> Make</div>
-                <div class="col-span-1">-</div>
-                <div class="col-span-1">{i + 1}</div>
-                <div class="col-span-2 font-mono">310-221{i}</div>
-                <div class="col-span-3">Component Name {i + 1}</div>
-                <div class="col-span-1">A</div>
-                <div class="col-span-1">{Math.floor(Math.random() * 10) + 1}</div>
-                <div class="col-span-1">EA</div>
-                <div class="col-span-1">Mech</div>
-             </div>
-             {/each}
+         <!-- Search Results Preview -->
+         <div class="space-y-3">
+            <div class="p-3 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary-400 cursor-pointer">
+               <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold text-gray-900">Machine Calibration SOP</span>
+                  <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-0.5 rounded">Video</span>
+               </div>
+               <p class="text-xs text-gray-600">Step-by-step calibration procedure for Line 3 equipment...</p>
+               <div class="text-[10px] text-gray-400 mt-1">Created 3 days ago by Sarah Chen</div>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary-400 cursor-pointer opacity-70">
+               <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold text-gray-900">Calibration Troubleshooting</span>
+                  <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded">Voice</span>
+               </div>
+               <p class="text-xs text-gray-600">Common issues and solutions when calibration fails...</p>
+               <div class="text-[10px] text-gray-400 mt-1">Created 2 weeks ago by Mike Torres</div>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary-400 cursor-pointer opacity-50">
+               <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold text-gray-900">Q3 Calibration RCA</span>
+                  <span class="text-[10px] bg-purple-100 text-purple-700 px-2 py-0.5 rounded">RCA</span>
+               </div>
+               <p class="text-xs text-gray-600">Root cause analysis of calibration drift incident...</p>
+               <div class="text-[10px] text-gray-400 mt-1">Created 1 month ago by Eva Debette</div>
+            </div>
          </div>
       </div>
     </div>
@@ -80,12 +75,12 @@
        <div>
           <div class="flex items-center gap-3 mb-3">
              <div class="text-gray-400">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 17h6"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
              </div>
-             <h3 class="text-lg font-bold text-white">Assembly Hierarchies</h3>
+             <h3 class="text-lg font-bold text-white">Instant Search</h3>
           </div>
           <p class="text-sm text-gray-400 leading-relaxed">
-             Toggle and re-order assembly hierarchies by just dragging them around. No more manual marking of levels.
+             Find any procedure, solution, or decision in seconds. Search across years of tribal knowledge like searching your email.
           </p>
        </div>
 
@@ -93,12 +88,12 @@
        <div>
           <div class="flex items-center gap-3 mb-3">
              <div class="text-gray-400">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
              </div>
-             <h3 class="text-lg font-bold text-white">Smart Redlining</h3>
+             <h3 class="text-lg font-bold text-white">Structured Knowledge</h3>
           </div>
           <p class="text-sm text-gray-400 leading-relaxed">
-             See what has been changed, added, or removed between your BOM revisions just by glancing at the colors.
+             AI automatically organizes unstructured inputs into clear, searchable documentation with steps, warnings, and key decisions.
           </p>
        </div>
 
@@ -106,12 +101,12 @@
        <div>
           <div class="flex items-center gap-3 mb-3">
              <div class="text-gray-400">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6"/><path d="M2.5 22v-6h6"/><path d="M2 11.5a10 10 0 0 1 18.8-4.3L21.5 8"/><path d="M22 12.5a10 10 0 0 1-18.8 4.2L2.5 16"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
              </div>
-             <h3 class="text-lg font-bold text-white">Automatic Revision Updates</h3>
+             <h3 class="text-lg font-bold text-white">Complete History</h3>
           </div>
           <p class="text-sm text-gray-400 leading-relaxed">
-             Keep your part revisions up to date with one-click that re-synchronizes CAD data throughout your entire assembly.
+             Every capture is timestamped and attributed. Track how processes evolve and who contributed what knowledge.
           </p>
        </div>
 
@@ -119,12 +114,12 @@
        <div>
           <div class="flex items-center gap-3 mb-3">
              <div class="text-gray-400">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16"/><path d="M4 15h16"/><path d="M10 3L8 21"/><path d="M16 3l-2 18"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
              </div>
-             <h3 class="text-lg font-bold text-white">Part Numbers</h3>
+             <h3 class="text-lg font-bold text-white">Team Knowledge</h3>
           </div>
           <p class="text-sm text-gray-400 leading-relaxed">
-             Assign new or existing part numbers to parts right from the BOM. Never end up with duplicate part numbers ever again.
+             Capture knowledge from experienced workers before they retire. Make tribal knowledge accessible to everyone.
           </p>
        </div>
 
@@ -132,12 +127,12 @@
        <div>
           <div class="flex items-center gap-3 mb-3">
              <div class="text-gray-400">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
              </div>
-             <h3 class="text-lg font-bold text-white">Change History</h3>
+             <h3 class="text-lg font-bold text-white">Continuous Learning</h3>
           </div>
           <p class="text-sm text-gray-400 leading-relaxed">
-             Every change to a BOM item is recorded at both a part and BOM level for maximum traceability.
+             Your factory memory compounds over time. Each capture makes the system more valuable, creating a competitive advantage.
           </p>
        </div>
 
@@ -145,12 +140,12 @@
        <div>
           <div class="flex items-center gap-3 mb-3">
              <div class="text-gray-400">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
              </div>
-             <h3 class="text-lg font-bold text-white">Placeholders</h3>
+             <h3 class="text-lg font-bold text-white">Compliance Ready</h3>
           </div>
           <p class="text-sm text-gray-400 leading-relaxed">
-             Ready yet? Easily sketch out your first BOM just like a spreadsheet and assign part numbers before CAD is ready.
+             Built for regulated manufacturing. Automatic documentation supports audit trails and quality management systems.
           </p>
        </div>
     </div>

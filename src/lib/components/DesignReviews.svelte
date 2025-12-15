@@ -1,12 +1,12 @@
 <script>
-  let activeTab = 'Geometry';
-  const tabs = ['Geometry', 'Drawing', 'Layout', 'Schematic'];
+  let activeTab = 'Problem';
+  const tabs = ['Problem', 'Investigation', 'Solution', 'Prevention'];
 </script>
 
 <section class="py-24 bg-white text-center">
   <div class="max-w-[1200px] mx-auto px-6">
     <h2 class="text-5xl font-bold mb-6 tracking-tight text-gray-900">
-      Magical Design<br>Reviews
+      Automatic Root Cause<br>Analysis Reports
     </h2>
     
     <!-- Tabs -->
@@ -24,47 +24,46 @@
     </div>
 
     <p class="text-lg text-gray-600 mb-16 max-w-2xl mx-auto leading-relaxed">
-      Collaborate with your team on every revision of every part right in the browser.<br>
-      Add annotations, comments, and complete reviews.
+      Turn team conversations into complete RCA reports automatically.<br>
+      Capture the problem, investigation, and solution before knowledge is lost.
     </p>
 
     <!-- UI Mockup -->
-    <div class="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 text-left h-[700px] flex flex-col">
+    <div class="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 text-left h-[700px] flex flex-col" generating>
       <!-- Toolbar -->
       <div class="h-12 border-b border-gray-200 flex items-center justify-between px-4 bg-white">
         <div class="flex items-center gap-4">
-           <span class="text-xs font-mono text-gray-500">318-2214</span>
+           <span class="text-xs font-mono text-gray-500">RCA-2024-03</span>
            <span class="text-gray-300">/</span>
            <span class="text-xs font-bold text-gray-900 flex items-center gap-2">
-             <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-             Enclosure - Revision 4
+             <span class="w-2 h-2 rounded-full bg-red-500"></span>
+             Line 3 Production Halt
            </span>
         </div>
         
         <div class="flex items-center gap-6">
            <div class="flex items-center gap-4 text-xs font-medium text-gray-500">
-              <button class="hover:text-gray-900 flex items-center gap-1"><span>👁️</span> Preview</button>
-              <button class="text-red-500 flex items-center gap-1 border-b-2 border-red-500 pb-3 mt-3"><span>💬</span> Comments <span class="bg-red-100 text-red-600 px-1 rounded text-[10px]">3</span></button>
-              <button class="hover:text-gray-900 flex items-center gap-1"><span>clock</span> History</button>
+              <button class="hover:text-gray-900 flex items-center gap-1"><span>📄</span> Report</button>
+              <button class="text-primary-600 flex items-center gap-1 border-b-2 border-primary-600 pb-3 mt-3"><span>💬</span> Discussion <span class="bg-primary-100 text-primary-600 px-1 rounded text-[10px]">8</span></button>
+              <button class="hover:text-gray-900 flex items-center gap-1"><span>⏱️</span> Timeline</button>
            </div>
         </div>
 
         <div class="flex items-center gap-2">
-           <button class="text-xs border border-gray-200 rounded px-2 py-1 flex items-center gap-1 text-gray-600">Views ▼</button>
-           <button class="text-xs border border-gray-200 rounded px-2 py-1 flex items-center gap-1 text-gray-600">100% Zoom ▼</button>
+           <button class="text-xs bg-gray-900 text-white rounded px-3 py-1.5 font-medium">Export PDF</button>
         </div>
       </div>
 
-      <div class="flex flex-1 overflow-hidden">
-        <!-- Left Sidebar (Tree) -->
-        <div class="w-64 bg-gray-50 border-r border-gray-200 flex flex-col text-xs">
-           <div class="p-2 border-b border-gray-200 flex items-center justify-between">
-              <span class="font-bold text-gray-700">ASSEMBLY</span>
-              <div class="flex gap-1 text-gray-400">
-                 <span>🔍</span>
-                 <span>⚙️</span>
-              </div>
-           </div>
+      <div class="flex flex-1 overflow-hidden bg-gray-50 items-center justify-center">
+        <div class="text-center p-8">
+          <div class="text-gray-400 mb-2">📊</div>
+          <p class="text-sm text-gray-500">RCA Report Interface</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
            <div class="flex-1 overflow-y-auto p-2 space-y-1">
               <div class="flex items-center gap-2 text-gray-600 pl-2">
                  <span>▼</span> <span>Reference Stand</span>
