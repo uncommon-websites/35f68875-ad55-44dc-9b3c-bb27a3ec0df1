@@ -13,7 +13,7 @@
     </div>
 
     <!-- Search UI Mockup -->
-    <div class="bg-white rounded-lg overflow-hidden shadow-2xl mb-20 text-gray-900 mx-auto max-w-[1000px]" generating>
+    <div class="bg-white rounded-lg overflow-hidden shadow-2xl mb-20 text-gray-900 mx-auto max-w-[1000px]">
       <!-- Window Header -->
       <div class="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center justify-between">
          <div class="flex items-center gap-2">

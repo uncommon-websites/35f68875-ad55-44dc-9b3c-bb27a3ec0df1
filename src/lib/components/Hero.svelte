@@ -13,7 +13,7 @@
   </button>
 
   <!-- Hero Image Placeholder -->
-  <div class="relative w-full aspect-[2/1] bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center border border-gray-100" generating>
+  <div class="relative w-full aspect-[2/1] bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center border border-gray-100">
     <!-- Placeholder for factory floor image -->
     <div class="text-gray-400 text-sm">Factory floor image</div>
   </div>

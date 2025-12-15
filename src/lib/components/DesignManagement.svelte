@@ -14,7 +14,7 @@
     </p>
 
     <!-- UI Mockup -->
-    <div class="bg-white rounded-xl shadow-2xl overflow-hidden text-left text-gray-900 mx-auto max-w-[1000px] border border-gray-200" generating>
+    <div class="bg-white rounded-xl shadow-2xl overflow-hidden text-left text-gray-900 mx-auto max-w-[1000px] border border-gray-200">
       <!-- Window Controls -->
       <div class="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center gap-2">
         <div class="flex gap-1.5">
